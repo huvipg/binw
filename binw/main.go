@@ -28,7 +28,6 @@ func Showhelp() {
 	color.Yellow("序号:5, e, q, exit")
 	color.Green(" 退出\n")
 }
-
 func scant() {
 	Showhelp()
 	for {
@@ -62,11 +61,11 @@ func scant() {
 }
 func main() {
 	app := cli.NewApp()
-	app.Name = "go-mygen"               //项目名称
-	app.Author = "百里"                   //作者名称
-	app.Version = "1.1.0 2019.10.2"     //版本号
+	app.Name = "binw"               //项目名称
+	app.Author = "huvip"                   //作者名称
+	app.Version = "1.0.0 2019.10.3"     //版本号
 	app.Copyright = "@Copyright 2019"   //版权保护
-	app.Usage = "快速生成操作MYSQL的CURD和文档等等" //说明
+	app.Usage = "快速使用go命令行代码模版" //说明
 	cli.HelpFlag = cli.BoolFlag{        //修改系统默认
 		Name:  "help",
 		Usage: "显示命令帮助",
@@ -107,9 +106,6 @@ func main() {
 		pass := c.String("p")
 		if pass == "" {
 			color.Blue("输入密码:")
-			if 0 == 0 {
-				//清屏
-			}
 		}
 		//编码格式
 		charset := c.String("c")
@@ -122,10 +118,6 @@ func main() {
 			return cli.NewExitError("数据库名称为空, 请使用 -d dbname", 9)
 		}
 		/*
-				err := Commands(DbConn)
-				if err != nil {
-					return cli.NewExitError(err, 9)
-				}
 			p("数据库端口号", port)
 			p("数据库用户名称", user)
 			p("数据库密码", pass)
