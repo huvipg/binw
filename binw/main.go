@@ -140,6 +140,6 @@ func main() {
 	var err error
 	err = app.Run(os.Args)
 	if err != nil {
-		p(err)
+	//	p(err)
 	}
 }
