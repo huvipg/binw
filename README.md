@@ -7,7 +7,7 @@ binw 这个是一个控制台工具go代码生成工具
 
 安装
 
-go get github.com/huvipg/binw/binw
+go get -u -v github.com/huvipg/binw/binw
 
 文档
 
