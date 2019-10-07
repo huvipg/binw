@@ -1,14 +1,13 @@
-package dir
+package myimp
 
 import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
-	"strings"
 	"path"
 	"path/filepath"
-	
+	"strings"
 )
 
 func Get(s string) string {
@@ -76,13 +75,13 @@ func AllListDir(dirPth, suffix string) (files []string, err error) {
 }
 
 //分离目录文件名后缀文件名函数
-	/*
+/*
 value	D:\yun\Go_项目生成\zz2\zz2_5\zz2_5.exe
 n=0 D:\yun\Go_项目生成\zz2\zz2_5\
 n=1 zz2_5.exe
 n=2 D:\yun\Go_项目生成\zz2\zz2_5\zz2_5
 n=3 .exe
-	 */
+*/
 func Paths(value string, n int) string {
 	var files string
 	suffix := path.Ext(value)
@@ -102,10 +101,8 @@ func Paths(value string, n int) string {
 		files = ""
 	}
 
-
 	return files
 }
-
 
 func A_file(filepath, str_content string) {
 	//创建或打开一个文件,追加写入
@@ -163,4 +160,3 @@ func Mkdir(path string) {
 func Ren(path string) string {
 	return strings.Replace(path, "\\", "/", -1)
 }
-
