@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"binw/color"
+	"./color"
 	"github.com/urfave/cli"
 )
 
