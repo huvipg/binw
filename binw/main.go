@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/huvipg/binw/color"
+	"binw/color"
 	"github.com/urfave/cli"
 )
 
